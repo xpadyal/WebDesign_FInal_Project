@@ -1,6 +1,7 @@
 import React from "react";
 import homeImg from "../../img/home.jpg";
 import "./SignIn.css";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   return (
@@ -30,13 +31,17 @@ const SignIn = () => {
           </div>
           <div className="password">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="******" />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="******"
+            />
           </div>
           <input type="submit" value="SIGN IN" className="submit" />
           <div className="links">
-            <a href="#">Forgot Password</a>
             <span>
-              Already have an account ? <a href="#">Log In</a>
+              Already have an account ? <Link to="/login">Login</Link>
             </span>
           </div>
         </form>
