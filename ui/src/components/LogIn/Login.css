@@ -39,17 +39,14 @@
     padding: 0 40px;
   }
   
-  .firstName,
-  .lastName,
   .email,
   .password {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
+    /* align-items: center; */
   }
   
-  .lastName input,
-  .firstName input,
   .right .email input,
   .right .password input {
     width: 90%;
