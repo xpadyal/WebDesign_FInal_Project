@@ -1,0 +1,43 @@
+.navbar {
+  padding: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar ul li {
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.navbar ul li:hover {
+  color: #388bf0;
+}
+
+.login-btn {
+  padding: 10px;
+  width: 100px;
+  color: white;
+  background-color: #388bf0;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar ul {
+    flex-wrap: wrap;
+  }
+
+  .navbar ul li {
+    margin-bottom: 15px;
+  }
+}
