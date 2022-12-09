@@ -29,7 +29,7 @@ const LogIn = () => {
           <div className="links">
             <a href="#">Forgot Password</a>
             <span>
-              Don't have an account ? <Link to="/">Signin</Link>
+              Don't have an account ? <Link to="/signin">Signin</Link>
             </span>
           </div>
         </form>
