@@ -1,29 +1,74 @@
-import React from "react";
+import React, { Component } from 'react';
 import homeImg from "../../img/home.jpg";
 import "./Login.css";
 import { Link } from "react-router-dom";
 
-const LogIn = () => {
-  return (
-    <div className="wrapper">
+export class LogIn extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          email: "",
+          password: "",
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+      handleSubmit(e) {
+        e.preventDefault();
+        const { email, password } = this.state;
+        console.log(email, password)
+        fetch("http://localhost:8000/api/login", {
+          method: "POST",
+          crossDomain: true,
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: JSON.stringify({
+            email,
+            password,
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data, "userRegister");
+            if (data.status == "ok") {
+              window.location.href = '/';
+              window.localStorage.setItem("token", data.data);
+              
+            }
+            else {
+              alert("User not found");
+            }
+          });
+      }
+  render() {
+    return (
+      <div className="component">
+        <div className="wrapper">
       <div className="left">
         <img src={homeImg} alt="" />
       </div>
       <div className="right">
         <h3 className="title">Log In</h3>
-        <form action="" className="form">
+        <form onSubmit={this.handleSubmit} className="form">
           <div className="email">
-            <label for="fname">Email</label>
-            <input
-              type="text"
-              id="fname"
-              name="fname"
-              placeholder="abc@gmail.com"
-            />
+          <label>Email address</label>
+          <input
+            type="email"
+            className="form-control"
+            placeholder="Enter email"
+            onChange={(e) => this.setState({ email: e.target.value })}
+          />
           </div>
           <div className="password">
-            <label for="lname">Password</label>
-            <input type="text" id="lname" name="lname" placeholder="******" />
+          <label>Password</label>
+          <input
+            type="password"
+            className="form-control"
+            placeholder="*****"
+            onChange={(e) => this.setState({ password: e.target.value })}
+          />
           </div>
           <input type="submit" value="LOG IN" className="submit" />
           <div className="links">
@@ -35,7 +80,9 @@ const LogIn = () => {
         </form>
       </div>
     </div>
-  );
-};
+      </div>
+    )
+  }
+}
 
-export default LogIn;
+export default LogIn
