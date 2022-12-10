@@ -20,11 +20,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Marketplace />}/>
+        <Route path="/Marketplace" element={<Marketplace />}/>
         <Route path="/sellNFT" element={<SellNFT />}/> 
         <Route path="/nftPage/:tokenId" element={<NFTPage />}/>        
         <Route path="/profile" element={<Profile />}/> 
-        <Route path="/LogIn" element={<LogIn />}/> 
+        <Route path="/" element={<LogIn />}/> 
         <Route path="/SignIn" element={<SignIn />}/> 
       </Routes>
     </BrowserRouter>

@@ -84,13 +84,13 @@ async function connectWebsite() {
           </li>
           <li className='w-2/6'>
             <ul className='lg:flex justify-between font-bold mr-10 text-lg'>
-              {location.pathname === "/" ? 
+              {location.pathname === "/Marketplace" ? 
               <li className='border-b-2 hover:pb-0 p-2'>
-                <Link to="/">Marketplace</Link>
+                <Link to="/Marketplace">Marketplace</Link>
               </li>
               :
               <li className='hover:border-b-2 hover:pb-0 p-2'>
-                <Link to="/">Marketplace</Link>
+                <Link to="/Marketplace">Marketplace</Link>
               </li>              
               }
               {location.pathname === "/sellNFT" ? 
@@ -111,13 +111,13 @@ async function connectWebsite() {
                 <Link to="/profile">Profile</Link>
               </li>              
               } 
-              {location.pathname === "/LogIn" ? 
+              {location.pathname === "/" ? 
               <li className='border-b-2 hover:pb-0 p-2'>
-                <Link to="/LogIn">Log In</Link>
+                <Link to="/">Log In</Link>
               </li>
               :
               <li className='hover:border-b-2 hover:pb-0 p-2'>
-                <Link to="/LogIn">Log In</Link>
+                <Link to="/">Log In</Link>
               </li>              
               }  
               <li>

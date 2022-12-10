@@ -33,7 +33,7 @@ export class LogIn extends Component {
           .then((data) => {
             console.log(data, "userRegister");
             if (data.status == "ok") {
-              window.location.href = '/';
+              window.location.href = '/Marketplace';
               window.localStorage.setItem("token", data.data);
               
             }
