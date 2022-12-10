@@ -1,11 +1,3 @@
-# Basic NFT Marketplace end to end
+We have built a NFT Marketplace where the user can list, buy and sell NFT. This project is built on ethereum blockchain which create ERC 721 token as NFT. We have used Solidity to deploy and create the smart contract.This projects contains 6 pages that are MarketPlace,Profile,List your NFT,Login and Signup. For doing the transaction we have used metamask wallet and all the data is stored in IPFS (Pinata). The front end is build on react js. We have used multiple react js component and properties. To start the project
 
-This code is for the Tutorial [Build your own NFT Marketplace from Scratch](https://docs.alchemy.com/alchemy/) built by [alchemy.com](https://alchemy.com)
-
-To set up the repository and run the marketplace locally, run the below
-```bash
-git clone https://github.com/OMGWINNING/NFT-Marketplace-Tutorial
-cd NFT-Marketplace-Tutorial
-npm install
-npm start
-```
+Run npm install npm start
