@@ -1,6 +1,6 @@
 //require('dotenv').config();
-const key = "fd2196cb285557f7cce7";
-const secret = "5e154aa333f9a63958ec42ab38e31a2c90bcc9f7143120665edf9b1f913654b5";
+const key = "bae0992314d3e44a3c03";
+const secret = "b0ebfb646c74d7f117c17cc84ffbaa746b3ccb602aa557854a49f5d45aec63bc";
 // const key = process.env.REACT_APP_PINATA_KEY;
 // const secret = process.env.REACT_APP_PINATA_SECRET;
 

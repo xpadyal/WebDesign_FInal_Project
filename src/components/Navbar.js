@@ -1,12 +1,9 @@
 import logo from '../logo_3.png';
 import fullLogo from '../full_logo.png';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+  
   Link,
-  useRouteMatch,
-  useParams
+  
 } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router';
@@ -83,7 +80,7 @@ async function connectWebsite() {
           </li>
           <li className='w-2/6'>
             <ul className='lg:flex justify-between font-bold mr-10 text-lg'>
-              {location.pathname === "/" ? 
+            {location.pathname === "/" ? 
               <li className='border-b-2 hover:pb-0 p-2'>
                 <Link to="/">Marketplace</Link>
               </li>
@@ -109,7 +106,16 @@ async function connectWebsite() {
               <li className='hover:border-b-2 hover:pb-0 p-2'>
                 <Link to="/profile">Profile</Link>
               </li>              
-              }  
+              } 
+              {location.pathname === "/LogIn" ? 
+              <li className='border-b-2 hover:pb-0 p-2'>
+                <Link to="/LogIn">LogIn</Link>
+              </li>
+              :
+              <li className='hover:border-b-2 hover:pb-0 p-2'>
+                <Link to="/LogIn">LogIn</Link>
+              </li>              
+              }
               <li>
                 <button className="enableEthereumButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm" onClick={connectWebsite}>{connected? "Connected":"Connect Wallet"}</button>
               </li>

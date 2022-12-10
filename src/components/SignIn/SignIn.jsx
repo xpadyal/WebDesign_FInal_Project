@@ -10,7 +10,7 @@ const SignIn = () => {
         <img src={homeImg} alt="" />
       </div>
       <div className="right">
-        <h3 className="title">Sign In</h3>
+        <h3 className="title">Sign Up</h3>
         <form action="" className="form">
           <div className="firstName">
             <label for="fname">First Name</label>
@@ -38,7 +38,7 @@ const SignIn = () => {
               placeholder="******"
             />
           </div>
-          <input type="submit" value="SIGN IN" className="submit" />
+          <input type="submit" value="SIGN UP" className="submit" />
           <div className="links">
             <span>
               Already have an account ? <Link to="/login">Login</Link>
