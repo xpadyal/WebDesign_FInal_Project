@@ -109,6 +109,15 @@ async function connectWebsite() {
               <li className='hover:border-b-2 hover:pb-0 p-2'>
                 <Link to="/profile">Profile</Link>
               </li>              
+              } 
+              {location.pathname === "/LogIn" ? 
+              <li className='border-b-2 hover:pb-0 p-2'>
+                <Link to="/LogIn">Log In</Link>
+              </li>
+              :
+              <li className='hover:border-b-2 hover:pb-0 p-2'>
+                <Link to="/LogIn">Log In</Link>
+              </li>              
               }  
               <li>
                 <button className="enableEthereumButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm" onClick={connectWebsite}>{connected? "Connected":"Connect Wallet"}</button>
