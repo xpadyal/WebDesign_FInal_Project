@@ -10,7 +10,7 @@ const SignIn = () => {
         <img src={homeImg} alt="" />
       </div>
       <div className="right">
-        <h3 className="title">Sign In</h3>
+        <h3 className="title">Sign Up</h3>
         <form action="" className="form">
           <div className="firstName">
             <label for="fname">First Name</label>
